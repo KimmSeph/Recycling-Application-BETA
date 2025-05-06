@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Residuos Map</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-sA+e2rU9e1A+Qj8f0BzZmtYulr4gK4YkHGU3pKwAfzY="
+    crossorigin=""
+  />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Residuos Map</h1>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+    <div class="map-header">
+      <h2>BSU Alangilan Waste Bin Map</h2>
+      <p>Find the nearest waste disposal bins on campus.</p>
+    </div>
+    <div id="map"></div>
+  </div>
+
+  <!-- BOTTOM NAVIGATION -->
+  <div class="bottom-nav">
+    <div class="nav-icon">
+      <img src="icons/home.png" alt="Home" />
+    </div>
+    <div class="nav-icon center-icon">
+      <img src="icons/center.png" alt="Center" />
+    </div>
+    <div class="nav-icon">
+      <img src="icons/settings.png" alt="Settings" />
+    </div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-uNN4sBv6HA3zYNhRjKj/jZ2Y5x14z3lQuQK6FfYwRVk="
+    crossorigin=""
+  ></script>
+
+  <script>
+    // Initialize the map
+    const map = L.map('map').setView([13.7741, 121.0662], 17); // Centered on BSU Alangilan
+
+    // Add OpenStreetMap tile layer (street view)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    // Example marker (you can update or load dynamically)
+    L.marker([13.7741, 121.0662])
+      .addTo(map)
+      .bindPopup("Sample Waste Bin Location")
+      .openPopup();
+  </script>
+</body>
+</html>
