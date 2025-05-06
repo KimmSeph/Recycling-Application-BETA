@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ecobin Map</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+</head>
+<body>
+  <header class="header">
+    <h1>ECOBIN</h1>
+  </header>
+
+  <main class="main-content">
+    <section class="map-header">
+      <h2>Waste Bin Locations @ BSU Alangilan</h2>
+      <p>Select a location to view</p>
+    </section>
+    <div id="map"></div>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="home.html" class="nav-icon">
+      <img src="home.png" alt="Home">
+    </a>
+    <a href="bin.html" class="nav-icon">
+      <img src="bin.png" alt="Bin">
+    </a>
+    <a href="scan.html" class="nav-icon active">
+      <img src="scan.png" alt="Scan">
+    </a>
+    <a href="maps.html" class="nav-icon">
+      <img src="map1.png" alt="Map">
+    </a>
+    <a href="info.html" class="nav-icon">
+      <img src="info.png" alt="Info">
+    </a>
+  </nav>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script>
+    const map = L.map('map').setView([13.7934, 121.0624], 17);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const bins = [
+      { lat: 13.7936, lng: 121.0628, type: 'Recyclable Bin', description: 'In front of IT Building', image: 'img/recyclable_bin.jpg' },
+      { lat: 13.7932, lng: 121.0619, type: 'Mixed Waste Bin', description: 'Near Main Gate', image: 'img/mixed_bin.jpg' },
+      { lat: 13.7928, lng: 121.0625, type: 'Compost Bin', description: 'Beside CICS garden', image: 'img/compost_bin.jpg' },
+      { lat: 13.7940, lng: 121.0620, type: 'Hazardous Waste Bin', description: 'Beside Engineering Lab', image: 'img/hazardous_bin.jpg' }
+    ];
+
+    bins.forEach((bin) => {
+      L.marker([bin.lat, bin.lng])
+        .addTo(map)
+        .bindPopup(`<strong>${bin.type}</strong><br>${bin.description}<br><img src="${bin.image}" class="popup-img">`);
+    });
+  </script>
+</body>
+</html>
