@@ -6,6 +6,7 @@
   <title>Ecobin Map</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body>
   <header class="header">
@@ -37,26 +38,48 @@
       <img src="info.png" alt="Info">
     </a>
   </nav>
-
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script>
-    const map = L.map('map').setView([13.7934, 121.0624], 17);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-
-    const bins = [
-      { lat: 13.7936, lng: 121.0628, type: 'Recyclable Bin', description: 'In front of IT Building', image: 'img/recyclable_bin.jpg' },
-      { lat: 13.7932, lng: 121.0619, type: 'Mixed Waste Bin', description: 'Near Main Gate', image: 'img/mixed_bin.jpg' },
-      { lat: 13.7928, lng: 121.0625, type: 'Compost Bin', description: 'Beside CICS garden', image: 'img/compost_bin.jpg' },
-      { lat: 13.7940, lng: 121.0620, type: 'Hazardous Waste Bin', description: 'Beside Engineering Lab', image: 'img/hazardous_bin.jpg' }
-    ];
-
-    bins.forEach((bin) => {
-      L.marker([bin.lat, bin.lng])
-        .addTo(map)
-        .bindPopup(`<strong>${bin.type}</strong><br>${bin.description}<br><img src="${bin.image}" class="popup-img">`);
+    document.addEventListener("DOMContentLoaded", () => {
+      const map = L.map('map').setView([13.7842539, 121.074329], 17);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+  
+      const wasteBins = [
+        {
+          lat: 13.7845,
+          lng: 121.0748,
+          type: 'Mixed Waste Bin',
+          description: 'Near CAFAD Building',
+          image: 'img/cafad_bin.jpg'
+        },
+        {
+          lat: 13.7852,
+          lng: 121.0753,
+          type: 'Recyclable Bin',
+          description: 'Beside CICS Building',
+          image: 'img/cics_bin.jpg'
+        },
+        {
+          lat: 13.7840,
+          lng: 121.0735,
+          type: 'Compost Bin',
+          description: 'At the Main Entrance',
+          image: 'img/entrance_bin.jpg'
+        }
+      ];
+  
+      wasteBins.forEach((bin) => {
+        L.marker([bin.lat, bin.lng])
+          .addTo(map)
+          .bindPopup(`
+            <strong>${bin.type}</strong><br>
+            ${bin.description}<br>
+            <img src="${bin.image}" class="popup-img" alt="${bin.type}">
+          `);
+      });
     });
   </script>
+  
 </body>
 </html>
