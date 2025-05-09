@@ -13,9 +13,26 @@
 
   <main class="main-content">
     <section class="map-header">
-      <h2>Waste Bin Information</h2>
-      <p>View different types of waste bins and their locations.</p>
+      <h2>Waste Bin Categories</h2>
+      <p>Tap a card to see what can be recycled.</p>
     </section>
+
+    <section class="card-container">
+      <div class="waste-card plastic" onclick="showItems('plastic')">
+        <img src="plastic.png" alt="Plastic">
+        <p>Plastic</p>
+      </div>
+      <div class="waste-card paper" onclick="showItems('paper')">
+        <img src="paper.png" alt="Paper">
+        <p>Paper</p>
+      </div>
+      <div class="waste-card glass" onclick="showItems('glass')">
+        <img src="glass.png" alt="Glass">
+        <p>Glass</p>
+      </div>
+    </section>
+
+    <section id="items-section" class="items-section"></section>
   </main>
 
   <nav class="bottom-nav">
@@ -35,5 +52,7 @@
       <img src="info.png" alt="Info">
     </a>
   </nav>
+
+  <script src="script.js"></script>
 </body>
 </html>
