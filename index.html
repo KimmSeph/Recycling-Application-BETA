@@ -6,6 +6,7 @@
   <title>Home - EcoBin</title>
   <link rel="stylesheet" href="style.css" />
   <style>
+    
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #121212;
@@ -14,29 +15,14 @@
       padding: 0;
     }
 
-    .header {
-      background-color: #6acf62;
-      padding: 16px;
-      text-align: center;
-    }
-
-    .header h1 {
-      font-size: 28px;
-      font-weight: bold;
-      color: #fffefe;
-      margin: 0;
+    .main-content {
+      min-height: 100vh;
+      background-color: #121212;
     }
 
     .app-container {
       padding: 20px;
       padding-bottom: 100px;
-    }
-
-    .section-title {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 12px;
-      color: #66bb6a;
     }
 
     .card {
@@ -63,6 +49,18 @@
       color: #ccc;
     }
 
+    .dashboard-metrics {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .metric {
+      flex: 1 1 45%;
+      margin: 8px 0;
+    }
+
     .step {
       display: flex;
       align-items: center;
@@ -72,15 +70,14 @@
       border-radius: 12px;
     }
 
-    .step img {
-      width: 28px;
-      height: 28px;
-      margin-right: 12px;
-    }
-
     .step span {
       font-size: 14px;
       color: #eee;
+    }
+
+    .step-icon {
+      font-size: 20px;
+      margin-right: 12px;
     }
 
     .cta {
@@ -100,84 +97,93 @@
       color: #777;
       margin-top: 40px;
     }
+    
   </style>
 </head>
 <body>
-  <header class="header">
-    <div class="dashboard card">
+  <div class="main-content">
+    <header class="header">
       <h1>EcoBin</h1>
-      <h3>Dashboard Overview</h3>
-      <div class="dashboard-metrics">
-        <div class="metric">
-          <h4>👥 50</h4>
-          <p>Users</p>
+    </header>
+
+    <main class="app-container">
+      <div class="dashboard card">
+        <h3>Dashboard Overview</h3>
+        <div class="dashboard-metrics">
+          <div class="metric">
+            <h4>👥 50</h4>
+            <p>Users</p>
+          </div>
+          <div class="metric">
+            <h4>♻️ 100+</h4>
+            <p>Properly Disposed</p>
+          </div>
+          <div class="metric">
+            <h4>⭐ 4.8</h4>
+            <p>Avg Rating</p>
+          </div>
+          <div class="metric">
+            <h4>🗑️ 15</h4>
+            <p>Bins Active</p>
+          </div>
         </div>
-        <div class="metric">
-          <h4>♻️ 100+</h4>
-          <p>Properly Disposed</p>
+      </div>
+
+      <div class="card">
+        <h3>What is EcoBin?</h3>
+        <p>EcoBin is a mobile-friendly system that helps you properly dispose of your waste using QR codes on bottles, bins, and packaging. No logins. No downloads. Just scan and throw responsibly.</p>
+      </div>
+
+      <div class="card">
+        <h3>Mission</h3>
+        <p>To empower individuals and institutions to manage waste sustainably through easy-to-use, tech-based solutions.</p>
+      </div>
+
+      <div class="card">
+        <h3>Vision</h3>
+        <p>A clean, eco-friendly environment supported by innovative and accessible waste disposal practices.</p>
+      </div>
+
+      <div class="card">
+        <h3>Implemented At</h3>
+        <p><strong>Batangas State University - Alangilan Campus</strong><br/>This system is proudly initiated to promote campus sustainability and responsible waste habits.</p>
+      </div>
+
+      <div class="cta">Scan & Dispose in 4 Easy Steps</div>
+
+      <div class="card steps-card">
+        <div class="step">
+          <span class="step-icon">🔲</span>
+          <span>Open QR Camera (iPhone) or Google Lens (Android)</span>
         </div>
-        <div class="metric">
-          <h4>⭐ 4.8</h4>
-          <p>Avg Rating</p>
+        <div class="step">
+          <span class="step-icon">🔍</span>
+          <span>Scan the Generated QR Code on the product or bin</span>
         </div>
-        <div class="metric">
-          <h4>🗑️ 15</h4>
-          <p>Bins Active</p>
+        <div class="step">
+          <span class="step-icon">📱</span>
+          <span>Read the instructions shown on your phone</span>
+        </div>
+        <div class="step">
+          <span class="step-icon">🗑️</span>
+          <span>Dispose the waste in the correct bin</span>
         </div>
       </div>
-    </div>
-    
-  </header>
 
-  <main class="app-container">
-    <div class="card">
-      <h3>What is EcoBin?</h3>
-      <p>EcoBin is a mobile-friendly system that helps you properly dispose of your waste using QR codes on bottles, bins, and packaging. No logins. No downloads. Just scan and throw responsibly.</p>
-    </div>
-
-    <div class="card">
-      <h3>Mission</h3>
-      <p>To empower individuals and institutions to manage waste sustainably through easy-to-use, tech-based solutions.</p>
-    </div>
-
-    <div class="card">
-      <h3>Vision</h3>
-      <p>A clean, eco-friendly environment supported by innovative and accessible waste disposal practices.</p>
-    </div>
-
-    <div class="card">
-      <h3>Implemented At</h3>
-      <p><strong>Batangas State University - Alangilan Campus</strong><br/>This system is proudly initiated to promote campus sustainability and responsible waste habits.</p>
-    </div>
-
-    <div class="cta">Scan & Dispose in 4 Easy Steps</div>
-
-    <div class="card steps-card">
-      <div class="step">
-        <span class="step-icon">🔲</span>
-        <span>Open QR Camera (iPhone) or Google Lens (Android)</span>
+      <div class="footer">
+        <div class="footer-section">
+          &copy; 2025 EcoBin. Designed for sustainability at BSU - Alangilan.
+        </div>
+        <div class="footer-section">
+          <a href="mailto:support@ecobin.app">Contact Support</a> |
+        </div>
+        <div class="footer-section">
+          Made with ♻️ by Students of BSIT
+        </div>
       </div>
-      <div class="step">
-        <span class="step-icon">🔍</span>
-        <span>Scan the Generated QR Code on the product or bin</span>
-      </div>
-      <div class="step">
-        <span class="step-icon">📱</span>
-        <span>Read the instructions shown on your phone</span>
-      </div>
-      <div class="step">
-        <span class="step-icon">🗑️</span>
-        <span>Dispose the waste in the correct bin</span>
-      </div>
-    </div>
-    
+    </main>
+  </div>
 
-    <div class="footer">
-      &copy; 2025 EcoBin. Designed for sustainability at BSU - Alangilan.
-    </div>
-  </main>
-
-  <!-- Navigation (unchanged) -->
   <nav class="bottom-nav">
     <a href="home.html" class="nav-icon active">
       <img src="home1.png" alt="Home">
