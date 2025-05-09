@@ -19,15 +19,10 @@ body {
   text-align: center;
 }
 
-.main-content {
-  flex: 1;
-  padding: 20px;
-  padding-bottom: 80px;
-}
-
 .map-header {
   text-align: center;
   margin-bottom: 24px;
+  z-index: 2;
 }
 
 .map-header h2 {
@@ -36,7 +31,7 @@ body {
 }
 
 #map {
-  height: 400px; /* or 100vh for full screen */
+  height: 400px;
   width: 100%;
   border-radius: 12px;
   margin: 16px auto;
@@ -47,7 +42,10 @@ body {
   flex-direction: column;
   gap: 16px;
   align-items: center;
+  width: 100%;
+  z-index: 2;
 }
+
 .dashboard-metrics {
   display: flex;
   justify-content: space-around;
@@ -76,7 +74,7 @@ body {
   color: #ccc;
 }
 
-.waste-card{
+.waste-card {
   background-color: #1c1c1c;
   border-radius: 16px;
   padding: 16px;
@@ -86,19 +84,20 @@ body {
   align-items: center;
   gap: 12px;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: background 0.3s;
 }
+
 .waste-card.plastic {
-  background-color: #6acf62; /* Greenish for plastic */
+  background-color: #6acf62;
 }
 
 .waste-card.paper {
-  background-color: #0cc0df; /* Brownish for paper */
+  background-color: #0cc0df;
 }
 
 .waste-card.glass {
-  background-color: #b4f504e3; /* Bluish for glass */
+  background-color: #b4f504e3;
 }
 
 .waste-card img {
@@ -167,4 +166,41 @@ body {
 
 .nav-icon:hover img {
   transform: translateY(-5px) scale(1.1);
+}
+
+/* MAIN CONTENT WITH BACKGROUND IMAGE AND DIM */
+.main-content {
+  position: relative;
+  background-image: url('background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 64px - 64px);
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center;
+  justify-content: flex-start;
+  padding: 24px 16px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Black dim layer */
+.main-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+/* Make all direct children appear above overlay */
+.main-content > * {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 480px;
 }
