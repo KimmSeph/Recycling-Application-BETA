@@ -3,20 +3,258 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Info - Ecobin Map</title>
+  <title>Info - EcoBin</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: #6acf62;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      font-weight: bold;
+      color: #fffefe;
+      margin: 0;
+    }
+
+    .main-content {
+      padding: 20px;
+      padding-bottom: 100px;
+    }
+
+    .map-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .map-header h2 {
+      font-size: 24px;
+      color: #66bb6a;
+    }
+
+    .map-header p {
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    /* Green Card Styling */
+    .about-card {
+      background-color: #66bb6a;
+      color: rgba(0, 0, 0, 0.918);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      margin-bottom: 30px;
+      text-align: justify;
+    }
+
+    .about-card h3 {
+      font-size: 22px;
+      margin-top: 0;
+    }
+
+    .about-card p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* Section Styling */
+    .team-section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .team-role-section {
+      margin-bottom: 40px;
+    }
+
+    .team-role-section h2 {
+      font-size: 24px;
+      color: #66bb6a;
+      margin-bottom: 20px;
+    }
+
+    /* Team Member Card Styling */
+    .team-member {
+      background: #1f1f1f;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      width: 100%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .team-member img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    .team-member .info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .team-member .info h3 {
+      font-size: 20px;
+      color: #66bb6a;
+      margin: 0;
+    }
+
+    .team-member .info .role {
+      font-weight: bold;
+      color: #66bb6a;
+    }
+
+    .team-member .info .description {
+      margin-top: 10px;
+      color: #ccc;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #777;
+      margin-top: 40px;
+    }
+
+  </style>
 </head>
 <body>
   <header class="header">
-    <h1>ECOBIN</h1>
+    <h1>EcoBin</h1>
   </header>
 
   <main class="main-content">
-    <section class="map-header">
-      <h2>About Ecobin</h2>
-      <p>Learn more about the Ecobin system and its environmental impact.</p>
+
+
+    <!-- EcoBin Description Card -->
+    <section class="about-card">
+      <h3>About EcoBin</h3>
+      <p>EcoBin is an innovative waste management system designed to promote sustainable practices. Our mission is to reduce waste and make recycling easier for everyone. By tracking waste bin locations, we ensure that users can always find the nearest disposal unit, making waste management more accessible and efficient. Join us in making the world a cleaner place!</p>
+    </section>
+
+    <section class="team-section">
+      <!-- Developer Section -->
+   <div class="team-role-section">
+  <h2>Developer</h2>
+  <div class="team-member">
+    <img src="developer.jpg" alt="Developer Image" />
+    <div class="info">
+      <h3>Ceferino Kimm De Las</h3>
+      <p class="role">Team Leader | Developer | Designer</p>
+      <p class="description">Led the development of core system logic, implemented QR scanning functionality, and integrated the Google Maps API for waste bin tracking.</p>
+    </div>
+  </div>
+
+  <div class="team-member">
+    <img src="developer.jpg" alt="Developer Image" />
+    <div class="info">
+      <h3>John Rexel Leaban</h3>
+      <p class="role">Developer</p>
+      <p class="description">Developed core system logic, integrated features such as QR code scanning, and implemented waste tracking system with API integration.</p>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Designer Section -->
+      <div class="team-role-section">
+        <h2>Designer</h2>
+        <div class="team-member">
+          <img src="designer.jpg" alt="Designer Image" />
+          <div class="info">
+            <h3>John Garry Magsino</h3>
+            <p class="role">Designer</p>
+            <p class="description">Designed the user-friendly interface with a mobile-first approach, focusing on accessibility and seamless navigation.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contributor Section -->
+      <div class="team-role-section">
+        <h2>Contributors</h2>
+        <div class="team-member">
+          <img src="collaborator1.jpg" alt="Collaborator 1 Image" />
+          <div class="info">
+            <h3>Marc Denver Barola</h3>
+            <p class="role">Contributor</p>
+            <p class="description">Assisted with system testing and refining user experience, ensuring functionality across various platforms.</p>
+          </div>
+        </div>
+        <div class="team-member">
+          <img src="collaborator2.jpg" alt="Collaborator 2 Image" />
+          <div class="info">
+            <h3>Jaspher Angelo Sanchez</h3>
+            <p class="role">Contributor</p>
+            <p class="description">Contributed to research on waste management best practices and assisted in integrating educational content.</p>
+          </div>
+        </div>
+        <div class="team-member">
+          <img src="collaborator3.jpg" alt="Collaborator 3 Image" />
+          <div class="info">
+            <h3>Joshua Soliza</h3>
+            <p class="role">Contributor</p>
+            <p class="description">Assisted with data management, content creation, and testing for the EcoBin platform.</p>
+          </div>
+        </div>
+        <div class="team-member">
+          <img src="collaborator4.jpg" alt="Collaborator 4 Image" />
+          <div class="info">
+            <h3>Joseph Vergara</h3>
+            <p class="role">Contributor</p>
+            <p class="description">Worked on integrating user feedback into the system and helped with content creation for user education.</p>
+          </div>
+        </div>
+        <div class="team-member">
+          <img src="collaborator5.jpg" alt="Collaborator 5 Image" />
+          <div class="info">
+            <h3>Princess Ramirez</h3>
+            <p class="role">Contributor</p>
+            <p class="description">Contributed to the content creation and helped with testing EcoBin’s user interface and usability across devices.</p>
+          </div>
+        </div>
+        <div class="team-member">
+          <img src="collaborator6.jpg" alt="Collaborator 6 Image" />
+          <div class="info">
+            <h3>Wayne Camacho</h3>
+            <p class="role">Contributor</p>
+            <p class="description">Assisted in system testing and refining features based on user feedback to enhance the overall user experience.</p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
+
+  <div class="footer">
+    <div class="footer-section">
+      &copy; 2025 EcoBin. Designed for sustainability at BSU - Alangilan.
+    </div>
+    <div class="footer-section">
+      <a href="mailto:support@ecobin.app">Contact Support</a> |
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms</a>
+    </div>
+    <div class="footer-section">
+      Made with ♻️ by Students of BSIT
+    </div>
+  </div>
 
   <nav class="bottom-nav">
     <a href="index.html" class="nav-icon">
