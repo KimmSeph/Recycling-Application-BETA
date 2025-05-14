@@ -88,16 +88,20 @@ body {
   transition: background 0.3s;
 }
 
-.waste-card.plastic {
-  background-color: #43a047;
+.waste-card.bio {
+  background-color: #43a047; /* Green */
 }
 
-.waste-card.paper {
-  background-color: #29b6f6;
+.waste-card.residue {
+  background-color: #000000; /* Black */
 }
 
-.waste-card.glass {
-  background-color: #263238;
+.waste-card.recycl {
+  background-color: #29b6f6; /* Blue */
+}
+
+.waste-card.infec {
+  background-color: #ffeb3b; /* Yellow */
 }
 
 .waste-card img {
@@ -144,7 +148,7 @@ body {
   bottom: 0;
   width: 100%;
   height: 64px;
-  background-color: #43a047;
+  background-color: #43a047; /* Restored original navigation bar color */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -276,4 +280,11 @@ body {
   .item h4 {
     font-size: 16px;
   }
+}
+
+.popup-img {
+  width: 100px; /* Set the width as per your requirement */
+  height: auto;
+  display: block;
+  margin-top: 10px;
 }
