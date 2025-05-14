@@ -75,7 +75,7 @@ body {
 }
 
 .waste-card {
-  background-color: #1c1c1c;
+  background-color: #000000;
   border-radius: 16px;
   padding: 16px;
   width: 90%;
@@ -97,7 +97,7 @@ body {
 }
 
 .waste-card.glass {
-  background-color: #b4f504e3;
+  background-color: #000000; /* updated to blackish */
 }
 
 .waste-card img {
@@ -203,4 +203,34 @@ body {
   z-index: 2;
   width: 100%;
   max-width: 480px;
+}
+/* Add this to the bottom of your existing styles */
+.main-content {
+  padding-bottom: 60px; /* Adds space at the bottom for the navbar */
+}
+
+.items-section {
+  max-height: calc(100vh - 120px); /* Keeps the section scrollable within the viewport */
+  overflow-y: auto; /* Enables vertical scrolling */
+  padding: 10px;
+}
+
+.bottom-nav {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 10; /* Ensures the navbar stays above content */
+}
+
+.team-member {
+  background: #1f1f1f;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px; /* Increased space between cards */
 }
