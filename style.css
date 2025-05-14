@@ -88,7 +88,7 @@ body {
   transition: background 0.3s;
 }
 
-.waste-card.bio {
+.waste-card.biodegradable {
   background-color: #6acf62; /* Green */
 }
 
@@ -96,11 +96,11 @@ body {
   background-color: #000000; /* Black */
 }
 
-.waste-card.recycl {
+.waste-card.recyclable {
   background-color: #29b6f6; /* Blue */
 }
 
-.waste-card.infec {
+.waste-card.infectious {
   background-color: #ffeb3b; /* Yellow */
 }
 
