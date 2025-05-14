@@ -1,83 +1,110 @@
 const wasteItems = {
-  plastic: [
+  yellow: [
     {
-      name: "Plastic Bottles",
-      desc: "Common beverage bottles made of PET plastic.",
-      dispose: "Recycle bin (Plastic)"
+      name: "Used Bandages",
+      desc: "Bandages contaminated with blood or bodily fluids.",
+      dispose: "Yellow Bin - Infectious Waste"
     },
     {
-      name: "Plastic Bags",
-      desc: "Lightweight plastic used for groceries.",
-      dispose: "Recycling center (soft plastic section)"
+      name: "Syringes",
+      desc: "Used needles and syringes from medical use.",
+      dispose: "Yellow Bin - Sharps container inside"
     },
     {
-      name: "Newspapers",
-      desc: "Old newspapers and magazines.",
-      dispose: "Recycle bin (Paper)"
+      name: "Surgical Gloves",
+      desc: "Contaminated gloves used in medical procedures.",
+      dispose: "Yellow Bin - Infectious Waste"
     },
     {
-      name: "Cardboard",
-      desc: "Shipping and packaging boxes.",
-      dispose: "Recycle bin (Paper)"
+      name: "Cotton Swabs",
+      desc: "Used cotton swabs with blood or discharge.",
+      dispose: "Yellow Bin - Infectious Waste"
     },
     {
-      name: "Glass Jars",
-      desc: "Used food containers like pickle jars.",
-      dispose: "Glass-only recycling bin"
+      name: "IV Tubes",
+      desc: "Used tubes from medical drips.",
+      dispose: "Yellow Bin - Infectious Waste"
     }
   ],
-  paper: [
+  black: [
     {
-      name: "Plastic Utensils",
-      desc: "Single-use plastic forks, spoons, and knives.",
-      dispose: "Regular waste bin"
+      name: "Sanitary Pads",
+      desc: "Used feminine hygiene products.",
+      dispose: "Black Bin - Residual Waste"
     },
     {
-      name: "Styrofoam",
-      desc: "Foam products like cups and takeout containers.",
-      dispose: "Regular waste bin"
+      name: "Used Tissues",
+      desc: "Dirty tissues and napkins.",
+      dispose: "Black Bin - Residual Waste"
     },
     {
-      name: "Tissues",
-      desc: "Used tissues or paper towels.",
-      dispose: "Regular waste bin"
-    },
-    {
-      name: "Chip Bags",
-      desc: "Snack bags made from multi-layered plastic.",
-      dispose: "Regular waste bin"
+      name: "Disposable Diapers",
+      desc: "Used baby diapers or adult diapers.",
+      dispose: "Black Bin - Residual Waste"
     },
     {
       name: "Cigarette Butts",
-      desc: "Used cigarette filters and remnants.",
-      dispose: "Regular waste bin"
+      desc: "Leftover cigarette filters.",
+      dispose: "Black Bin - Residual Waste"
+    },
+    {
+      name: "Broken Ceramics",
+      desc: "Shattered mugs or ceramic plates.",
+      dispose: "Black Bin - Residual Waste"
     }
   ],
-  glass: [
+  green: [
     {
-      name: "Batteries",
-      desc: "Used alkaline, lithium, and rechargeable batteries.",
-      dispose: "Hazardous waste disposal center"
+      name: "Fruit Peels",
+      desc: "Organic waste like banana and orange peels.",
+      dispose: "Green Bin - Biodegradable Waste"
     },
     {
-      name: "Paint Cans",
-      desc: "Old paint cans containing leftover paint.",
-      dispose: "Hazardous waste disposal center"
+      name: "Vegetable Scraps",
+      desc: "Kitchen leftovers like carrot or onion skins.",
+      dispose: "Green Bin - Biodegradable Waste"
     },
     {
-      name: "Cleaning Products",
-      desc: "Household cleaning agents with chemicals.",
-      dispose: "Hazardous waste disposal center"
+      name: "Eggshells",
+      desc: "Cracked eggshells from cooking.",
+      dispose: "Green Bin - Biodegradable Waste"
     },
     {
-      name: "Fluorescent Light Bulbs",
-      desc: "Light bulbs containing mercury vapor.",
-      dispose: "Hazardous waste disposal center"
+      name: "Coffee Grounds",
+      desc: "Leftover coffee powder from brewing.",
+      dispose: "Green Bin - Biodegradable Waste"
     },
     {
-      name: "Pesticides",
-      desc: "Unused or expired insecticides and herbicides.",
-      dispose: "Hazardous waste disposal center"
+      name: "Leaves",
+      desc: "Dry or fallen leaves from plants.",
+      dispose: "Green Bin - Biodegradable Waste"
+    }
+  ],
+  blue: [
+    {
+      name: "Plastic Bottles",
+      desc: "Water and soda bottles made of PET plastic.",
+      dispose: "Blue Bin - Recyclable Waste"
+    },
+    {
+      name: "Paper",
+      desc: "Clean paper sheets or old documents.",
+      dispose: "Blue Bin - Recyclable Waste"
+    },
+    {
+      name: "Cardboard",
+      desc: "Flattened boxes from packaging.",
+      dispose: "Blue Bin - Recyclable Waste"
+    },
+    {
+      name: "Metal Cans",
+      desc: "Used soda and food cans.",
+      dispose: "Blue Bin - Recyclable Waste"
+    },
+    {
+      name: "Glass Bottles",
+      desc: "Unbroken glass jars and bottles.",
+      dispose: "Blue Bin - Recyclable Waste"
     }
   ]
 };
@@ -89,7 +116,7 @@ function showItems(type) {
   if (existingItems) existingItems.remove();
 
   if (openType === type) {
-    openType = null; // Same card clicked twice, so close it
+    openType = null;
     return;
   }
 
