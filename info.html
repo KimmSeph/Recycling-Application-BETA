@@ -91,17 +91,11 @@
       background: #1f1f1f;
       border-radius: 12px;
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      align-items: flex-start;
       padding: 20px;
       width: 100%;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    }
-
-    .team-member img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      margin-right: 20px;
     }
 
     .team-member .info {
@@ -142,8 +136,6 @@
   </header>
 
   <main class="main-content">
-
-
     <!-- EcoBin Description Card -->
     <section class="about-card">
       <h3>About EcoBin</h3>
@@ -152,33 +144,29 @@
 
     <section class="team-section">
       <!-- Developer Section -->
-   <div class="team-role-section">
-  <h2>Developer</h2>
-  <div class="team-member">
-    <img src="developer.jpg" alt="Developer Image" />
-    <div class="info">
-      <h3>Ceferino Kimm De Las</h3>
-      <p class="role">Team Leader | Developer | Designer</p>
-      <p class="description">Led the development of core system logic, implemented QR scanning functionality, and integrated the Google Maps API for waste bin tracking.</p>
-    </div>
-  </div>
+      <div class="team-role-section">
+        <h2>Developer</h2>
+        <div class="team-member">
+          <div class="info">
+            <h3>Ceferino Kimm De Las</h3>
+            <p class="role">Team Leader | Developer | Designer</p>
+            <p class="description">Led the development of core system logic, implemented QR scanning functionality, and integrated the Google Maps API for waste bin tracking.</p>
+          </div>
+        </div>
 
-  <div class="team-member">
-    <img src="developer.jpg" alt="Developer Image" />
-    <div class="info">
-      <h3>John Rexel Leaban</h3>
-      <p class="role">Developer</p>
-      <p class="description">Developed core system logic, integrated features such as QR code scanning, and implemented waste tracking system with API integration.</p>
-    </div>
-  </div>
-</div>
-
+        <div class="team-member">
+          <div class="info">
+            <h3>John Rexel Leaban</h3>
+            <p class="role">Developer</p>
+            <p class="description">Developed core system logic, integrated features such as QR code scanning, and implemented waste tracking system with API integration.</p>
+          </div>
+        </div>
+      </div>
 
       <!-- Designer Section -->
       <div class="team-role-section">
         <h2>Designer</h2>
         <div class="team-member">
-          <img src="designer.jpg" alt="Designer Image" />
           <div class="info">
             <h3>John Garry Magsino</h3>
             <p class="role">Designer</p>
@@ -191,7 +179,6 @@
       <div class="team-role-section">
         <h2>Contributors</h2>
         <div class="team-member">
-          <img src="collaborator1.jpg" alt="Collaborator 1 Image" />
           <div class="info">
             <h3>Marc Denver Barola</h3>
             <p class="role">Contributor</p>
@@ -199,7 +186,6 @@
           </div>
         </div>
         <div class="team-member">
-          <img src="collaborator2.jpg" alt="Collaborator 2 Image" />
           <div class="info">
             <h3>Jaspher Angelo Sanchez</h3>
             <p class="role">Contributor</p>
@@ -207,7 +193,6 @@
           </div>
         </div>
         <div class="team-member">
-          <img src="collaborator3.jpg" alt="Collaborator 3 Image" />
           <div class="info">
             <h3>Joshua Soliza</h3>
             <p class="role">Contributor</p>
@@ -215,7 +200,6 @@
           </div>
         </div>
         <div class="team-member">
-          <img src="collaborator4.jpg" alt="Collaborator 4 Image" />
           <div class="info">
             <h3>Joseph Vergara</h3>
             <p class="role">Contributor</p>
@@ -223,7 +207,6 @@
           </div>
         </div>
         <div class="team-member">
-          <img src="collaborator5.jpg" alt="Collaborator 5 Image" />
           <div class="info">
             <h3>Princess Ramirez</h3>
             <p class="role">Contributor</p>
@@ -231,7 +214,6 @@
           </div>
         </div>
         <div class="team-member">
-          <img src="collaborator6.jpg" alt="Collaborator 6 Image" />
           <div class="info">
             <h3>Wayne Camacho</h3>
             <p class="role">Contributor</p>
