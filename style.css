@@ -89,7 +89,7 @@ body {
 }
 
 .waste-card.bio {
-  background-color: #43a047; /* Green */
+  background-color: #6acf62; /* Green */
 }
 
 .waste-card.residue {
@@ -238,15 +238,6 @@ body {
   width: 100%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   margin-bottom: 20px;
-}
-
-/* Additional waste category style */
-.waste-card.hazardous {
-  background-color: #ef5350;
-}
-
-.waste-card.hazardous:hover {
-  background-color: #c62828;
 }
 
 /* Responsive items-section scroll with fade-in effect */
