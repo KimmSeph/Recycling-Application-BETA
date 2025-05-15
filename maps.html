@@ -2,11 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ecobin Map</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    #map {
+      height: 500px;
+    }
+    .popup-img {
+      width: 100%;
+      height: auto;
+      margin-top: 8px;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
   <header class="header">
@@ -22,18 +33,18 @@
   </main>
 
   <div class="footer">
-  <div class="footer-section">
-    &copy; 2025 EcoBin. Designed for sustainability at BSU - Alangilan.
+    <div class="footer-section">
+      &copy; 2025 EcoBin. Designed for sustainability at BSU - Alangilan.
+    </div>
+    <div class="footer-section">
+      <a href="mailto:support@ecobin.app">Contact Support</a> |
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms</a>
+    </div>
+    <div class="footer-section">
+      Made with ♻️ by Students of BSIT
+    </div>
   </div>
-  <div class="footer-section">
-    <a href="mailto:support@ecobin.app">Contact Support</a> |
-    <a href="privacy.html">Privacy Policy</a> |
-    <a href="terms.html">Terms</a>
-  </div>
-  <div class="footer-section">
-    Made with ♻️ by Students of BSIT
-  </div>
-</div>
 
   <nav class="bottom-nav">
     <a href="index.html" class="nav-icon">
@@ -52,37 +63,52 @@
       <img src="info.png" alt="Info">
     </a>
   </nav>
+
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const map = L.map('map').setView([13.7842539, 121.074329], 17);
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap contributors'
       }).addTo(map);
-  
+
       const wasteBins = [
         {
           lat: 13.7845,
           lng: 121.0748,
-          type: 'Recyclable Bin | Biodegrable Bin | Infectious Bin | Residue Bin',
-          description: 'Near CAFAD Building',
-          image: 'cafad.jpg'
+          type: 'Recyclable Bin | Biodegradable Bin | Infectious Bin | Residue Bin',
+          description: 'CAFAD Building - Left Entrance',
+          image: 'cafad2.jpg'
         },
         {
-          lat: 13.7852,
-          lng: 121.0753,
-          type: 'Recyclable Bin | Biodegrable Bin | Infectious Bin | Residue Bin',
-          description: 'Near Canteen | CAFAD',
-          image: 'cafad2.jpg'
+          lat: 13.7847,
+          lng: 121.0749,
+          type: 'Recyclable Bin | Biodegradable Bin | Infectious Bin | Residue Bin',
+          description: 'CAFAD Building - Right Entrance',
+          image: 'cafad.jpg'
         },
         {
           lat: 13.7840,
           lng: 121.0735,
-          type: 'Recyclable Bin | Biodegrable Bin | Infectious Bin | Residue Bin',
-          description: 'At the Main Entrance',
-          image: 'img/entrance_bin.jpg'
+          type: 'Recyclable Bin | Biodegradable Bin | Infectious Bin | Residue Bin',
+          description: 'Main Entrance',
+          image: 'entrance.jpg'
+        },
+        {
+          lat: 13.7849,
+          lng: 121.0742,
+          type: 'Recyclable Bin | Biodegradable Bin | Infectious Bin | Residue Bin',
+          description: 'Gymnasium',
+          image: 'gymnasium.jpg'
+        },
+        {
+          lat: 13.7843,
+          lng: 121.0746,
+          type: 'Recyclable Bin | Biodegradable Bin | Infectious Bin | Residue Bin',
+          description: 'Hallway',
+          image: 'hallway.jpg'
         }
       ];
-  
+
       wasteBins.forEach((bin) => {
         L.marker([bin.lat, bin.lng])
           .addTo(map)
@@ -94,6 +120,5 @@
       });
     });
   </script>
-  
 </body>
 </html>
