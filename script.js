@@ -1,5 +1,5 @@
 const wasteItems = {
-  yellow: [
+  infectious: [
     {
       name: "Used Bandages",
       desc: "Bandages contaminated with blood or bodily fluids.",
@@ -26,7 +26,7 @@ const wasteItems = {
       dispose: "Yellow Bin - Infectious Waste"
     }
   ],
-  black: [
+  residue: [
     {
       name: "Sanitary Pads",
       desc: "Used feminine hygiene products.",
@@ -53,7 +53,7 @@ const wasteItems = {
       dispose: "Black Bin - Residual Waste"
     }
   ],
-  green: [
+  biodegradable: [
     {
       name: "Fruit Peels",
       desc: "Organic waste like banana and orange peels.",
@@ -80,7 +80,7 @@ const wasteItems = {
       dispose: "Green Bin - Biodegradable Waste"
     }
   ],
-  blue: [
+  recyclable: [
     {
       name: "Plastic Bottles",
       desc: "Water and soda bottles made of PET plastic.",
