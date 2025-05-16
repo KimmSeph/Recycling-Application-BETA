@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scan - Ecobin Map</title>
+  <style>
+    body {
+      background-color: #212121;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      padding-top: 80px; /* for fixed header */
+    }
+
+    /* Header */
+    .header1 {
+      background-color: #6acf62;
+      padding: 16px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-sizing: border-box;
+    }
+
+    .header1 h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    /* Main Content */
+    .main-content {
+        position: relative;
+        background-image: url("background.png");
+        background-size: cover;
+        background-position: center;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        z-index: 0;
+        padding-top: 80px; /* ✅ Add this to create space below the header */
+        flex-direction: column; /* ✅ Add this to stack text and map vertically */
+        gap: 20px; /* ✅ Add spacing between text and map */
+      }
+      
+
+    .map-header h2 {
+      color: white;
+      margin-bottom: 5px;
+    }
+
+    .map-header p {
+      color: #aaa;
+      margin-top: 0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+
+    /* Card Styles */
+    .card {
+      background-color: #161616;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(57, 57, 57, 0.1);
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    .header {
+      background-color: #29b6f6;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: #29b6f6;
+    }
+
+    .icon-img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .icon h2 {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .card p {
+      padding: 20px;
+      text-align: center;
+      color: #dddada;
+    }
+
+    .font1 {
+      color: #29b6f6;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .continue-button {
+      background-color: #29b6f6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 20px auto;
+      display: block;
+      transition: background-color 0.3s;
+    }
+
+    .continue-button:hover {
+      background-color: #29b6f6;
+    }
+
+    /* Bottom Nav */
+    .bottom-nav {
+      background-color: #6acf62;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+
+    .nav-icon {
+      text-align: center;
+    }
+
+    .nav-icon img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .nav-icon.active img {
+      border: 2px solid white;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header1">
+    <h1>ECOBIN</h1>
+  </header>
+
+
+
+    <!-- Success Message Card -->
+    <div class="container">
+      <div class="card">
+        <div class="header">
+          <div class="icon">
+            <img src="recyclable.png" alt="Recycle Icon" class="icon-img">
+            <h2>Recyclable Waste</h2>
+          </div>
+        </div>
+        <p>The Waste currently in hand is <a href="#" class="font1">Recycable Waste</a>, Please throw it in the Blue bin.</p>
+       <button class="continue-button" onclick="goToBinPage()">Explore More!!</button>
+      </div>
+    </div>
+  </main>
+
+
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-icon">
+      <img src="home.png" alt="Home">
+    </a>
+    <a href="bin.html" class="nav-icon">
+      <img src="bin.png" alt="Bin">
+    </a>
+    <a href="scan.html" class="nav-icon active">
+      <img src="scan1.png" alt="Scan">
+    </a>
+    <a href="maps.html" class="nav-icon">
+      <img src="map.png" alt="Map">
+    </a>
+    <a href="info.html" class="nav-icon">
+      <img src="info.png" alt="Info">
+    </a>
+  </nav>
+    <script>
+    function goToBinPage() {
+      window.location.href = "bin.html";
+    }
+  </script>
+</body>
+</html>
